@@ -13,7 +13,7 @@ public class MeasureTimeAspect {
         long startTime = System.currentTimeMillis();
         Object proceed = joinPoint.proceed();
         long executionTime = System.currentTimeMillis() - startTime;
-        System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
+        System.out.println("MeasureTime for '" + joinPoint.getSignature() + "' executed in " + executionTime + "ms");
         return proceed;
     }
 }
